@@ -1,3 +1,10 @@
 #Security
 pip install python-jose[cryptography]
 pip install passlib[bcrypt]
+fastapi
+uvicorn
+sqlalchemy
+pymysql
+python-dotenv
+python-jose[cryptography]
+passlib[bcrypt]

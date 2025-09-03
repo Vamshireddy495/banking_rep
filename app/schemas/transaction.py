@@ -2,20 +2,28 @@ from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime
 
-def TransactionCreate(BaseModel):
+class TransactionCreate(BaseModel):
+
+    from_account_id: Optional[int]
+    to_account_id: Optional[int]
+    amount: Optional[float]
+    #type: str
+
+class TransactionOut(BaseModel):
+    id: int
     
     from_account_id: int
-    to_account_id: int
-    amount: float
-    type: str
+    to_account_id: Optional[int]
+    amount: Optional[float]
 
-def TransactionOut(BaseModel):
-    id: int
-    from_account_id: int
-    to_account_id: int
     timestamp: datetime
     type: str
-    received_amount: float
 
-    class Config:
-        orm_mode = True
+
+class TransactionSummary(BaseModel):
+    to_account_id: int
+    amount: float
+
+model_config = {
+    "from_attributes": True
+}

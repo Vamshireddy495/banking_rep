@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto bg-white p-6 rounded-xl shadow-md mt-10">
+  <h2 class="text-2xl font-bold mb-4">Welcome, {{ user }} 🎉</h2>
+  <p class="text-gray-600 mb-4">This is your banking dashboard.</p>
+
+  <div class="grid grid-cols-2 gap-4">
+    <a href="/accounts" class="bg-blue-500 text-white p-4 rounded-lg text-center hover:bg-blue-600">Accounts</a>
+    <a href="/transactions" class="bg-green-500 text-white p-4 rounded-lg text-center hover:bg-green-600">Transactions</a>
+  </div>
+</div>
+{% endblock %}

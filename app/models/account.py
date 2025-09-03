@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, Column, Integer, String, Float, ForeignKey
+from sqlalchemy import  Column, Integer, String, Float, ForeignKey
 from sqlalchemy.orm import relationship
 from app.core.database import Base
 
@@ -11,6 +11,3 @@ class Account(Base):
     account_type = Column(String(50))
 
     owner = relationship('User', back_populates = 'accounts')
-
-    #Execution order 2
-    
