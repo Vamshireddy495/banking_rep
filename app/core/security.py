@@ -24,7 +24,6 @@ def verify_password(plain_password:str, hashed_password:str) -> bool:
     return pwd_context.verify(plain_password,hashed_password)
 
 
-
 # JWT Token Create&_Validate
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
 
@@ -35,7 +34,7 @@ def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm= ALGORITHM)
     return encoded_jwt
 
-
+#Token Validation Function
 def validate_access_token(token: str) -> dict:
 
     try:
