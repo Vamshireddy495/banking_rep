@@ -1,10 +1,12 @@
 #Security
-pip install python-jose[cryptography]
-pip install passlib[bcrypt]
+python-jose[cryptography]
+passlib[bcrypt]
 fastapi
 uvicorn
 sqlalchemy
-pymysql
+pydantic
 python-dotenv
-python-jose[cryptography]
-passlib[bcrypt]
+pymysql
+pydantic[email] #server-1  | ImportError: email-validator is not installed, run `pip install pydantic[email]`
+python-multipart # def login(username: str = Form(...), password: str = Form(...)): /RuntimeError: Form data requires "python-multipart" to be installed.
+jinja2 
